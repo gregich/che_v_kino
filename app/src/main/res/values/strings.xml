@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">che_v_kino</string>
+    <string name="start">Start</string>
+    <string name="Найти_кинотеатр">Найти кинотеатр</string>
+    <string name="Найти_фильм">Найти фильм</string>
+    <string name="Новый_кинотеатр">Новый кинотеатр</string>
+    <string name="Новый_фильм">Новый фильм</string>
+</resources>
