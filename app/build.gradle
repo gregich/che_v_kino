@@ -6,7 +6,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.ivanov_practika"
+        applicationId "com.example.che_v_kino"
         minSdk 21
         targetSdk 32
         versionCode 1

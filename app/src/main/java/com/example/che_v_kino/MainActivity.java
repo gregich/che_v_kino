@@ -1,12 +1,10 @@
-package com.example.ivanov_practika;
+package com.example.che_v_kino;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.Menu;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.content.Intent;
-import java.util.ArrayList;
-import android.os.AsyncTask;
 
 public class MainActivity extends AppCompatActivity {
     @Override

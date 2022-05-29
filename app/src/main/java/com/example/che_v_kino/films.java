@@ -1,30 +1,30 @@
-package com.example.ivanov_practika;
+package com.example.che_v_kino;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.os.AsyncTask;
-import android.view.LayoutInflater;
-import android.view.ViewGroup;
-import android.widget.TextView;
-import android.widget.EditText;
 import android.os.Bundle;
+import android.util.JsonReader;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.TextView;
+
 import java.io.IOException;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.net.MalformedURLException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import android.util.JsonReader;
-import android.widget.BaseAdapter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
-import android.widget.ListView;
 import java.util.List;
 
-
-public class theatre extends AppCompatActivity {
+public class films extends AppCompatActivity {
     MyTask mt;
     TextView tvInfo;
     EditText tvName;
@@ -49,7 +49,7 @@ public class theatre extends AppCompatActivity {
             HttpURLConnection myConnection = null;
             try {
                 URL mySite = new
-                        URL("http://10.0.2.2:8080/kino?id=1&Name="+params[0]);
+                        URL("http://127.0.0.1:8080/phpmyadmin/sql.php?db=kino&table=films&pos=0"+params[0]);
                 myConnection =
                         (HttpURLConnection) mySite.openConnection();
             } catch (MalformedURLException e) {
@@ -140,8 +140,8 @@ public class theatre extends AppCompatActivity {
         @Override
         protected void onPostExecute(ArrayList<String[]> result) {
             super.onPostExecute(result);
-            theatre.ClAdapter clAdapter=new
-                    theatre.ClAdapter(tvInfo.getContext(),result);
+            films.ClAdapter clAdapter=new
+                    films.ClAdapter(tvInfo.getContext(),result);
             ListView lvMain = (ListView) findViewById(R.id.lvMain);
             lvMain.setAdapter(clAdapter);
             tvInfo.setText("End");
@@ -150,12 +150,12 @@ public class theatre extends AppCompatActivity {
     }
 
     public void onclick(View v) {
-        mt = new theatre.MyTask();
+        mt = new films.MyTask();
         mt.execute(tvName.getText().toString());
     }
 
 
-    class ClAdapter extends BaseAdapter{
+    class ClAdapter extends BaseAdapter {
         Context ctx;
         LayoutInflater lInflater;
         List<String[]> lines;
@@ -191,6 +191,3 @@ public class theatre extends AppCompatActivity {
         };
     }
 }
-
-
-

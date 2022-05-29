@@ -1,4 +1,4 @@
-package com.example.ivanov_practika;
+package com.example.che_v_kino;
 
 import org.junit.Test;
 

@@ -1,20 +1,15 @@
-package com.example.ivanov_practika;
+package com.example.che_v_kino;
 
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.JsonReader;
-import android.util.Log;
-import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
-import android.widget.CheckedTextView;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;

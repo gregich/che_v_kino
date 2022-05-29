@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ivanov_practika">
+    package="com.example.che_v_kino">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,23 +13,23 @@
         android:theme="@style/Theme.che_v_kino"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".newtheatre"
+            android:name="com.example.che_v_kino.newtheatre"
             android:exported="false" />
         <activity
-            android:name=".newfilm"
+            android:name="com.example.che_v_kino.newfilm"
             android:exported="false" />
         <activity
-            android:name=".films"
+            android:name="com.example.che_v_kino.films"
             android:exported="false" />
         <activity
-            android:name=".theatre"
+            android:name="com.example.che_v_kino.theatre"
             android:exported="false">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
+                android:value="com.example.che_v_kino.MainActivity" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.che_v_kino.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
