@@ -65,7 +65,7 @@ public class newfilm extends AppCompatActivity {
             String total = null;
             HttpURLConnection myConnection=null;
             try {
-                URL githubEndpoint = new URL("http://10.0.2.2:8080/json/");
+                URL githubEndpoint = new URL("http://127.0.0.1:8080json/");
                 myConnection =
                         (HttpURLConnection) githubEndpoint.openConnection();
             } catch (MalformedURLException e) {
